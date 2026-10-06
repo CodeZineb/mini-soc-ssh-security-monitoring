@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables & secrets (Credential leak prevention)
+.env
+.env.*
+*.pem
+*.key
+*.cert
+*.pfx
+secrets/
+credentials.json
+*.id_rsa
+*.id_ed25519
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Diagnostic & Network capture files (prevent leaking real traffic/dumps)
+*.pcap
+*.pcapng
+*.evtx
+*.dmp
+*.dump
+
+# Ignore real log files to prevent accidental leakage of production logs.
+# Whitelist only the documented synthetic educational logs in data/.
+*.log
+!data/*.log
+
+# Streamlit local configuration & secrets
+.streamlit/secrets.toml

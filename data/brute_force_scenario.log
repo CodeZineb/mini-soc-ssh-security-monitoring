@@ -1,0 +1,80 @@
+# ==============================================================================
+# DATASET TYPE: SYNTHETIC / SIMULATED LOG DATASET
+# PURPOSE: Educational Demonstration & Cybersecurity Portfolio Showcase
+# NOTICE: All events, timestamps, IP addresses, usernames, and processes
+#         in this dataset are completely simulated.
+# COMPLIANCE: All IP addresses strictly utilize RFC 5737 documentation ranges
+#             (192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24).
+# SAFETY: No real hosts or network entities are targeted or referenced.
+#
+# SCENARIO TIMELINE:
+#  - Stage A (09:00 - 09:30): Benign baseline traffic & isolated user mistakes
+#  - Stage B (09:40 - 09:44): Rapid high-frequency brute-force attack (IP: 203.0.113.88)
+#  - Stage C (10:00 - 10:25): Low-and-slow password spraying (IP: 198.51.100.45)
+#  - Stage D (10:45 - 10:52): Targeted credential cracking & compromise (IP: 198.51.100.190)
+# ==============================================================================
+
+# STAGE A: Normal Baseline Operations
+Oct 14 09:00:01 soc-node-01 CRON[40101]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 09:00:02 soc-node-01 CRON[40101]: pam_unix(cron:session): session closed for user root
+Oct 14 09:04:15 soc-node-01 sshd[40120]: Accepted publickey for sysadmin from 192.0.2.10 port 51240 ssh2: RSA SHA256:7f9a2b4c6e8d1a3b5c7e9f0a2b4c6e8d1a3b5c7e9f0
+Oct 14 09:04:15 soc-node-01 sshd[40120]: pam_unix(sshd:session): session opened for user sysadmin by (uid=0)
+Oct 14 09:12:30 soc-node-01 sshd[40150]: Failed password for alice from 192.0.2.12 port 49811 ssh2
+Oct 14 09:12:45 soc-node-01 sshd[40150]: Accepted password for alice from 192.0.2.12 port 49811 ssh2
+Oct 14 09:12:45 soc-node-01 sshd[40150]: pam_unix(sshd:session): session opened for user alice by (uid=0)
+Oct 14 09:20:11 soc-node-01 sshd[40120]: pam_unix(sshd:session): session closed for user sysadmin
+Oct 14 09:28:40 soc-node-01 sshd[40150]: pam_unix(sshd:session): session closed for user alice
+
+# STAGE B: High-Frequency SSH Brute-Force Attack
+# MITRE ATT&CK: T1110.001 (Password Guessing) - Rapid automated dictionary attack on root/admin
+Oct 14 09:40:02 soc-node-01 sshd[40201]: Failed password for root from 203.0.113.88 port 38102 ssh2
+Oct 14 09:40:10 soc-node-01 sshd[40203]: Failed password for root from 203.0.113.88 port 38108 ssh2
+Oct 14 09:40:18 soc-node-01 sshd[40205]: Failed password for root from 203.0.113.88 port 38114 ssh2
+Oct 14 09:40:27 soc-node-01 sshd[40207]: Failed password for root from 203.0.113.88 port 38120 ssh2
+Oct 14 09:40:36 soc-node-01 sshd[40209]: Failed password for root from 203.0.113.88 port 38126 ssh2
+Oct 14 09:40:48 soc-node-01 sshd[40212]: Invalid user admin from 203.0.113.88 port 38132
+Oct 14 09:40:50 soc-node-01 sshd[40212]: Failed password for invalid user admin from 203.0.113.88 port 38132 ssh2
+Oct 14 09:41:02 soc-node-01 sshd[40215]: Invalid user admin from 203.0.113.88 port 38138
+Oct 14 09:41:04 soc-node-01 sshd[40215]: Failed password for invalid user admin from 203.0.113.88 port 38138 ssh2
+Oct 14 09:41:15 soc-node-01 sshd[40218]: Invalid user administrator from 203.0.113.88 port 38144
+Oct 14 09:41:17 soc-node-01 sshd[40218]: Failed password for invalid user administrator from 203.0.113.88 port 38144 ssh2
+Oct 14 09:41:30 soc-node-01 sshd[40221]: Failed password for root from 203.0.113.88 port 38150 ssh2
+Oct 14 09:41:42 soc-node-01 sshd[40224]: Failed password for root from 203.0.113.88 port 38156 ssh2
+Oct 14 09:42:01 soc-node-01 sshd[40227]: Failed password for root from 203.0.113.88 port 38162 ssh2
+Oct 14 09:42:15 soc-node-01 sshd[40230]: Failed password for root from 203.0.113.88 port 38168 ssh2
+Oct 14 09:42:31 soc-node-01 sshd[40233]: Failed password for root from 203.0.113.88 port 38174 ssh2
+Oct 14 09:42:50 soc-node-01 sshd[40236]: Failed password for root from 203.0.113.88 port 38180 ssh2
+Oct 14 09:43:12 soc-node-01 sshd[40239]: Failed password for root from 203.0.113.88 port 38186 ssh2
+Oct 14 09:43:35 soc-node-01 sshd[40242]: Failed password for root from 203.0.113.88 port 38192 ssh2
+Oct 14 09:44:00 soc-node-01 sshd[40245]: Failed password for root from 203.0.113.88 port 38198 ssh2
+
+# STAGE C: Low-and-Slow Distributed Password Spraying
+# MITRE ATT&CK: T1110.003 (Password Spraying) - Common credential tested across distinct accounts with throttled intervals
+Oct 14 10:01:14 soc-node-01 sshd[40301]: Invalid user service_acc from 198.51.100.45 port 42100
+Oct 14 10:01:16 soc-node-01 sshd[40301]: Failed password for invalid user service_acc from 198.51.100.45 port 42100 ssh2
+Oct 14 10:04:22 soc-node-01 sshd[40308]: Failed password for deploy from 198.51.100.45 port 42108 ssh2
+Oct 14 10:07:45 soc-node-01 sshd[40315]: Invalid user postgres from 198.51.100.45 port 42116
+Oct 14 10:07:47 soc-node-01 sshd[40315]: Failed password for invalid user postgres from 198.51.100.45 port 42116 ssh2
+Oct 14 10:11:05 soc-node-01 sshd[40322]: Invalid user backup from 198.51.100.45 port 42124
+Oct 14 10:11:07 soc-node-01 sshd[40322]: Failed password for invalid user backup from 198.51.100.45 port 42124 ssh2
+Oct 14 10:14:30 soc-node-01 sshd[40330]: Invalid user jenkins from 198.51.100.45 port 42132
+Oct 14 10:14:32 soc-node-01 sshd[40330]: Failed password for invalid user jenkins from 198.51.100.45 port 42132 ssh2
+Oct 14 10:18:12 soc-node-01 sshd[40338]: Failed password for devops from 198.51.100.45 port 42140 ssh2
+Oct 14 10:21:40 soc-node-01 sshd[40345]: Invalid user oracle from 198.51.100.45 port 42148
+Oct 14 10:21:42 soc-node-01 sshd[40345]: Failed password for invalid user oracle from 198.51.100.45 port 42148 ssh2
+Oct 14 10:25:01 soc-node-01 sshd[40352]: Invalid user git from 198.51.100.45 port 42156
+Oct 14 10:25:03 soc-node-01 sshd[40352]: Failed password for invalid user git from 198.51.100.45 port 42156 ssh2
+
+# STAGE D: Targeted Account Cracking & Potential Compromise
+# Indicator of Compromise (IoC): Repeated auth failures followed by successful authentication & interactive session
+Oct 14 10:45:10 soc-node-01 sshd[40401]: Failed password for devops from 198.51.100.190 port 48201 ssh2
+Oct 14 10:46:22 soc-node-01 sshd[40404]: Failed password for devops from 198.51.100.190 port 48208 ssh2
+Oct 14 10:47:35 soc-node-01 sshd[40407]: Failed password for devops from 198.51.100.190 port 48215 ssh2
+Oct 14 10:48:48 soc-node-01 sshd[40410]: Failed password for devops from 198.51.100.190 port 48222 ssh2
+Oct 14 10:49:55 soc-node-01 sshd[40413]: Failed password for devops from 198.51.100.190 port 48230 ssh2
+Oct 14 10:50:40 soc-node-01 sshd[40416]: Failed password for devops from 198.51.100.190 port 48238 ssh2
+Oct 14 10:51:15 soc-node-01 sshd[40420]: Accepted password for devops from 198.51.100.190 port 48245 ssh2
+Oct 14 10:51:15 soc-node-01 sshd[40420]: pam_unix(sshd:session): session opened for user devops by (uid=0)
+Oct 14 10:51:50 soc-node-01 sudo:   devops : TTY=pts/1 ; PWD=/home/devops ; USER=root ; COMMAND=/bin/bash
+Oct 14 10:51:50 soc-node-01 sudo: pam_unix(sudo:session): session opened for user root by devops(uid=1002)
+Oct 14 10:54:12 soc-node-01 sshd[40420]: pam_unix(sshd:session): session closed for user devops

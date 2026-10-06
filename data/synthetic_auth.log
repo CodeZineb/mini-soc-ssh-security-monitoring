@@ -1,0 +1,51 @@
+# ==============================================================================
+# DATASET TYPE: SYNTHETIC / SIMULATED LOG DATASET
+# PURPOSE: Educational Demonstration & Cybersecurity Portfolio Showcase
+# NOTICE: All events, timestamps, IP addresses, usernames, and processes
+#         in this dataset are completely simulated.
+# COMPLIANCE: All IP addresses strictly utilize RFC 5737 documentation ranges
+#             (192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24).
+# SAFETY: No real hosts or network entities are targeted or referenced.
+# ==============================================================================
+Oct 14 08:00:01 soc-node-01 CRON[31001]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 08:00:02 soc-node-01 CRON[31001]: pam_unix(cron:session): session closed for user root
+Oct 14 08:05:12 soc-node-01 sshd[31020]: Accepted publickey for sysadmin from 192.0.2.10 port 52140 ssh2: RSA SHA256:7f9a2b4c6e8d1a3b5c7e9f0a2b4c6e8d1a3b5c7e9f0
+Oct 14 08:05:12 soc-node-01 sshd[31020]: pam_unix(sshd:session): session opened for user sysadmin by (uid=0)
+Oct 14 08:12:45 soc-node-01 sshd[31055]: Failed password for john from 192.0.2.15 port 49122 ssh2
+Oct 14 08:13:02 soc-node-01 sshd[31055]: Accepted password for john from 192.0.2.15 port 49122 ssh2
+Oct 14 08:13:02 soc-node-01 sshd[31055]: pam_unix(sshd:session): session opened for user john by (uid=0)
+Oct 14 08:17:01 soc-node-01 CRON[31080]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 08:17:02 soc-node-01 CRON[31080]: pam_unix(cron:session): session closed for user root
+Oct 14 08:25:30 soc-node-01 sshd[31055]: pam_unix(sshd:session): session closed for user john
+Oct 14 08:30:11 soc-node-01 sshd[31110]: Accepted publickey for deploy from 192.0.2.22 port 44312 ssh2: RSA SHA256:1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2
+Oct 14 08:30:11 soc-node-01 sshd[31110]: pam_unix(sshd:session): session opened for user deploy by (uid=0)
+Oct 14 08:31:05 soc-node-01 sshd[31110]: pam_unix(sshd:session): session closed for user deploy
+Oct 14 08:42:19 soc-node-01 sshd[31145]: Invalid user guest from 198.51.100.8 port 39812
+Oct 14 08:42:21 soc-node-01 sshd[31145]: Failed password for invalid user guest from 198.51.100.8 port 39812 ssh2
+Oct 14 08:42:22 soc-node-01 sshd[31145]: Connection closed by invalid user guest 198.51.100.8 port 39812 [preauth]
+Oct 14 08:50:01 soc-node-01 CRON[31170]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 08:50:02 soc-node-01 CRON[31170]: pam_unix(cron:session): session closed for user root
+Oct 14 09:02:14 soc-node-01 sshd[31201]: Accepted password for sarah from 192.0.2.18 port 51104 ssh2
+Oct 14 09:02:14 soc-node-01 sshd[31201]: pam_unix(sshd:session): session opened for user sarah by (uid=0)
+Oct 14 09:15:33 soc-node-01 sshd[31230]: Failed password for sarah from 192.0.2.18 port 51104 ssh2
+Oct 14 09:15:45 soc-node-01 sshd[31230]: Accepted password for sarah from 192.0.2.18 port 51104 ssh2
+Oct 14 09:20:00 soc-node-01 sshd[31020]: pam_unix(sshd:session): session closed for user sysadmin
+Oct 14 09:35:10 soc-node-01 sshd[31260]: Accepted publickey for backup_svc from 192.0.2.30 port 58902 ssh2: RSA SHA256:9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e
+Oct 14 09:35:10 soc-node-01 sshd[31260]: pam_unix(sshd:session): session opened for user backup_svc by (uid=0)
+Oct 14 09:36:45 soc-node-01 sshd[31260]: pam_unix(sshd:session): session closed for user backup_svc
+Oct 14 09:44:02 soc-node-01 sshd[31288]: Invalid user test from 203.0.113.14 port 41250
+Oct 14 09:44:04 soc-node-01 sshd[31288]: Failed password for invalid user test from 203.0.113.14 port 41250 ssh2
+Oct 14 09:44:05 soc-node-01 sshd[31288]: Connection closed by invalid user test 203.0.113.14 port 41250 [preauth]
+Oct 14 09:55:01 soc-node-01 CRON[31310]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 09:55:02 soc-node-01 CRON[31310]: pam_unix(cron:session): session closed for user root
+Oct 14 10:10:15 soc-node-01 sshd[31340]: Accepted password for alex from 192.0.2.25 port 48102 ssh2
+Oct 14 10:10:15 soc-node-01 sshd[31340]: pam_unix(sshd:session): session opened for user alex by (uid=0)
+Oct 14 10:28:40 soc-node-01 sshd[31201]: pam_unix(sshd:session): session closed for user sarah
+Oct 14 10:45:00 soc-node-01 CRON[31380]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 10:45:01 soc-node-01 CRON[31380]: pam_unix(cron:session): session closed for user root
+Oct 14 11:00:22 soc-node-01 sshd[31410]: Accepted publickey for sysadmin from 192.0.2.10 port 52310 ssh2: RSA SHA256:7f9a2b4c6e8d1a3b5c7e9f0a2b4c6e8d1a3b5c7e9f0
+Oct 14 11:00:22 soc-node-01 sshd[31410]: pam_unix(sshd:session): session opened for user sysadmin by (uid=0)
+Oct 14 11:15:30 soc-node-01 sshd[31340]: pam_unix(sshd:session): session closed for user alex
+Oct 14 11:30:01 soc-node-01 CRON[31450]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 14 11:30:02 soc-node-01 CRON[31450]: pam_unix(cron:session): session closed for user root
+Oct 14 11:45:10 soc-node-01 sshd[31410]: pam_unix(sshd:session): session closed for user sysadmin
